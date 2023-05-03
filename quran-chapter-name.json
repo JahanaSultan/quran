@@ -1,0 +1,579 @@
+{
+    "chapter_name": [
+        {
+            "chapter": 1,
+            "name_tr": "Fatiha",
+            "name_az": "Fatihə",
+            "verse_count": 7
+        },
+        {
+            "chapter": 2,
+            "name_tr": "Bakara",
+            "name_az": "Bəqərə",
+            "verse_count": 286
+        },
+        {
+            "chapter": 3,
+            "name_tr": "Ali İmran",
+            "name_az": "Ali İmran",
+            "verse_count": 200
+        },
+        {
+            "chapter": 4,
+            "name_tr": "Nisa",
+            "name_az": "Nisa"
+        },
+        {
+            "chapter": 5,
+            "name_tr": "Maide",
+            "name_az": "Maidə"
+        },
+        {
+            "chapter": 6,
+            "name_tr": "Enam",
+            "name_az": "Ən'am"
+        },
+        {
+            "chapter": 7,
+            "name_tr": "Araf",
+            "name_az": "Ə'raf"
+        },
+        {
+            "chapter": 8,
+            "name_tr": "Enfal",
+            "name_az": "Ənfal"
+        },
+        {
+            "chapter": 9,
+            "name_tr": "Tevbe",
+            "name_az": "Tövbə"
+        },
+        {
+            "chapter": 10,
+            "name_tr": "Yunus",
+            "name_az": "Yunus"
+        },
+        {
+            "chapter": 11,
+            "name_tr": "Hud",
+            "name_az": "Hud"
+        },
+        {
+            "chapter": 12,
+            "name_tr": "Yusuf",
+            "name_az": "Yusuf"
+        },
+        {
+            "chapter": 13,
+            "name_tr": "Rad",
+            "name_az": "Rad"
+        },
+        {
+            "chapter": 14,
+            "name_tr": "İbrahim",
+            "name_az": "İbrahim"
+        },
+        {
+            "chapter": 15,
+            "name_tr": "Hicr",
+            "name_az": "Hicr"
+        },
+        {
+            "chapter": 16,
+            "name_tr": "Nahl",
+            "name_az": "Nahl"
+        },
+        {
+            "chapter": 17,
+            "name_tr": "İsra",
+            "name_az": "İsra"
+        },
+        {
+            "chapter": 18,
+            "name_tr": "Kehf",
+            "name_az": "Kəhf"
+        },
+        {
+            "chapter": 19,
+            "name_tr": "Meryem",
+            "name_az": "Məryəm"
+        },
+        {
+            "chapter": 20,
+            "name_tr": "Taha",
+            "name_az": "Taha"
+        },
+        {
+            "chapter": 21,
+            "name_tr": "Enbiya",
+            "name_az": "Ənbiya"
+        },
+        {
+            "chapter": 22,
+            "name_tr": "Hacc",
+            "name_az": "Həcc"
+        },
+        {
+            "chapter": 23,
+            "name_tr": "Muminun",
+            "name_az": "Mü'minun"
+        },
+        {
+            "chapter": 24,
+            "name_tr": "Nur",
+            "name_az": "Nur"
+        },
+        {
+            "chapter": 25,
+            "name_tr": "Furkan",
+            "name_az": "Furqan"
+        },
+        {
+            "chapter": 26,
+            "name_tr": "Şuara",
+            "name_az": "Şuara"
+        },
+        {
+            "chapter": 27,
+            "name_tr": "Neml",
+            "name_az": "Nəml"
+        },
+        {
+            "chapter": 28,
+            "name_tr": "Kasas",
+            "name_az": "Qasas"
+        },
+        {
+            "chapter": 29,
+            "name_tr": "Ankebut",
+            "name_az": "Ənkəbut"
+        },
+        {
+            "chapter": 30,
+            "name_tr": "Rum",
+            "name_az": "Rum"
+        },
+        {
+            "chapter": 31,
+            "name_tr": "Lokman",
+            "name_az": "Lokman"
+        },
+        {
+            "chapter": 32,
+            "name_tr": "Secde",
+            "name_az": "Səcdə"
+        },
+        {
+            "chapter": 33,
+            "name_tr": "Ahzab",
+            "name_az": "Əhzab"
+        },
+        {
+            "chapter": 34,
+            "name_tr": "Sebe",
+            "name_az": "Səbə"
+        },
+        {
+            "chapter": 35,
+            "name_tr": "Fatır",
+            "name_az": "Fatir"
+        },
+        {
+            "chapter": 36,
+            "name_tr": "Yasin",
+            "name_az": "Yasin"
+        },
+        {
+            "chapter": 37,
+            "name_tr": "Saffat",
+            "name_az": "Səffat"
+        },
+        {
+            "chapter": 38,
+            "name_tr": "Sad",
+            "name_az": "Sad"
+        },
+        {
+            "chapter": 39,
+            "name_tr": "Zümer",
+            "name_az": "Zümər"
+        },
+        {
+            "chapter": 40,
+            "name_tr": "Mümin",
+            "name_az": "Mü'min"
+        },
+        {
+            "chapter": 41,
+            "name_tr": "Fussilet",
+            "name_az": "Fussilət"
+        },
+        {
+            "chapter": 42,
+            "name_tr": "Şura",
+            "name_az": "Şura"
+        },
+        {
+            "chapter": 43,
+            "name_tr": "Zuhruf",
+            "name_az": "Zuxruf"
+        },
+        {
+            "chapter": 44,
+            "name_tr": "Duhân",
+            "name_az": "Duxan"
+        },
+        {
+            "chapter": 45,
+            "name_tr": "Casiye",
+            "name_az": "Casiyə"
+        },
+        {
+            "chapter": 46,
+            "name_tr": "Ahkaf",
+            "name_az": "Əhqaf"
+        },
+        {
+            "chapter": 47,
+            "name_tr": "Muhammed",
+            "name_az": "Muhamməd"
+        },
+        {
+            "chapter": 48,
+            "name_tr": "Fetih",
+            "name_az": "Fətih"
+        },
+        {
+            "chapter": 49,
+            "name_tr": "Hucurat",
+            "name_az": "Hucurat"
+        },
+        {
+            "chapter": 50,
+            "name_tr": "Kaf",
+            "name_az": "Qaf"
+        },
+        {
+            "chapter": 51,
+            "name_tr": "Zariyat",
+            "name_az": "Zariyat"
+        },
+        {
+            "chapter": 52,
+            "name_tr": "Tur",
+            "name_az": "Tur"
+        },
+        {
+            "chapter": 53,
+            "name_tr": "Necm",
+            "name_az": "Nəcm"
+        },
+        {
+            "chapter": 54,
+            "name_tr": "Kamer", 
+            "name_az": "Qəmər"
+        },
+        {
+            "chapter": 55,
+            "name_tr": "Rahman",
+            "name_az": "Rəhman"
+        },
+        {
+            "chapter": 56,
+            "name_tr": "Vakıa",
+            "name_az": "Vaqiə"
+        },
+        {
+            "chapter": 57,
+            "name_tr": "Hadid",
+            "name_az": "Hədid"
+        },
+        {
+            "chapter": 58,
+            "name_tr": "Mücadele",
+            "name_az": "Mücadilə"
+        },
+        {
+            "chapter": 59,
+            "name_tr": "Haşr",
+            "name_az": "Həşr"
+        },
+        {
+            "chapter": 60,
+            "name_tr": "Mümtehine",
+            "name_az": "Mümtəhinə"
+        },
+        {
+            "chapter": 61,
+            "name_tr": "Saff",
+            "name_az": "Səff"
+        },
+        {
+            "chapter": 62,
+            "name_tr": "Cuma",
+            "name_az": "Cuma"
+        },
+        {
+            "chapter": 63,
+            "name_tr": "Münafikun",
+            "name_az": "Münafiqun"
+        },
+        {
+            "chapter": 64,
+            "name_tr": "Teğabun",
+            "name_az": "Təğabun"
+        },
+        {
+            "chapter": 65,
+            "name_tr": "Talak",
+            "name_az": "Tələqə"
+        },
+        {
+            "chapter": 66,
+            "name_tr": "Tahrim",
+            "name_az": "Təhrim"
+        },
+        {
+            "chapter": 67,
+            "name_tr": "Mülk",
+            "name_az": "Mülk"
+        },
+        {
+            "chapter": 68,
+            "name_tr": "Kalem",
+            "name_az": "Qələm"
+        },
+        {
+            "chapter": 69,
+            "name_tr": "Hakka",
+            "name_az": "Həqqə"
+        },
+        {
+            "chapter": 70,
+            "name_tr": "Mearic",
+            "name_az": "Mə'aric"
+        },
+        {
+            "chapter": 71,
+            "name_tr": "Nuh",
+            "name_az": "Nuh"
+        },
+        {
+            "chapter": 72,
+            "name_tr": "Cin",
+            "name_az": "Cin"
+        },
+        {
+            "chapter": 73,
+            "name_tr": "Müzzemmil",
+            "name_az": "Müzzəmmil"
+        },
+        {
+            "chapter": 74,
+            "name_tr": "Müddessir",
+            "name_az": "Müddəssir"
+        },
+        {
+            "chapter": 75,
+            "name_tr": "Kıyamet",
+            "name_az": "Qiyamət"
+        },
+        {
+            "chapter": 76,
+            "name_tr": "İnsan",
+            "name_az": "İnsan"
+        },
+        {
+            "chapter": 77,
+            "name_tr": "Mürselat",
+            "name_az": "Mürsələt"
+        },
+        {
+            "chapter": 78,
+            "name_tr": "Nebe",
+            "name_az": "Nəbə"
+        },
+        {
+            "chapter": 79,
+            "name_tr": "Naziat",
+            "name_az": "Nəziət"
+        },
+        {
+            "chapter": 80,
+            "name_tr": "Abese",
+            "name_az": "Abəsə"
+        },
+        {
+            "chapter": 81,
+            "name_tr": "Tekvir",
+            "name_az": "Təkvir"
+        },
+        {
+            "chapter": 82,
+            "name_tr": "İnfitar",
+            "name_az": "İnfitar"
+        },
+        {
+            "chapter": 83,
+            "name_tr": "Mutaffifin",
+            "name_az": "Mütəffifin"
+        },
+        {
+            "chapter": 84,
+            "name_tr": "İnşikak",
+            "name_az": "İnşiqak"
+        },
+        {
+            "chapter": 85,
+            "name_tr": "Buruc",
+            "name_az": "Buruc"
+        },
+        {
+            "chapter": 86,
+            "name_tr": "Tariq",
+            "name_az": "Tərəq"
+        },
+        {
+            "chapter": 87,
+            "name_tr": "A'la",
+            "name_az": "Ə'lə"
+        },
+        {
+            "chapter": 88,
+            "name_tr": "Gasiye",
+            "name_az": "Qəriə"
+        },
+        {
+            "chapter": 89,
+            "name_tr": "Fecr",
+            "name_az": "Fəcr"
+        },
+        {
+            "chapter": 90,
+            "name_tr": "Beled",
+            "name_az": "Bələd"
+        },
+        {
+            "chapter": 91,
+            "name_tr": "Şems",
+            "name_az": "Şəms"
+        },
+        {
+            "chapter": 92,
+            "name_tr": "Leyl",
+            "name_az": "Leyl"
+        },
+        {
+            "chapter": 93,
+            "name_tr": "Duha",
+            "name_az": "Duha"
+        },
+        {
+            "chapter": 94,
+            "name_tr": "İnşirah",
+            "name_az": "İnşirah"
+        },
+        {
+            "chapter": 95,
+            "name_tr": "Tin",
+            "name_az": "Tin"
+        },
+        {
+            "chapter": 96,
+            "name_tr": "Alak",
+            "name_az": "Ələq"
+        },
+        {
+            "chapter": 97,
+            "name_tr": "Kadir",
+            "name_az": "Qədr"
+        },
+        {
+            "chapter": 98,
+            "name_tr": "Beyyine",
+            "name_az": "Bəyyinə"
+        },
+        {
+            "chapter": 99,
+            "name_tr": "Zilzal",
+            "name_az": "Zilzal"
+        },
+        {
+            "chapter": 100,
+            "name_tr": "Adiyat",
+            "name_az": "Ədiyyat"
+        },
+        {
+            "chapter": 101,
+            "name_tr": "Karia",
+            "name_az": "Qariə"
+        },
+        {
+            "chapter": 102,
+            "name_tr": "Tekasür",
+            "name_az": "Təkasür"
+        },
+        {
+            "chapter": 103,
+            "name_tr": "Asr",
+            "name_az": "Əsr"
+        },
+        {
+            "chapter": 104,
+            "name_tr": "Hümeze",
+            "name_az": "Hüməzə"
+        },
+        {
+            "chapter": 105,
+            "name_tr": "Fil",
+            "name_az": "Fil"
+        },
+        {
+            "chapter": 106,
+            "name_tr": "Kureyş",
+            "name_az": "Qurayş"
+        },
+        {
+            "chapter": 107,
+            "name_tr": "Maun",
+            "name_az": "Mə'un"
+        },
+        {
+            "chapter": 108,
+            "name_tr": "Kevser",
+            "name_az": "Kövsər"
+        },
+        {
+            "chapter": 109,
+            "name_tr": "Kafirun",
+            "name_az": "Kafirun"
+        },
+        {
+            "chapter": 110,
+            "name_tr": "Nasr",
+            "name_az": "Nэsr"
+        },
+        {
+            "chapter": 111,
+            "name_tr": "Tebbet",
+            "name_az": "Təbbət"
+
+        },
+        {
+            "chapter": 112,
+            "name_tr": "İhlas",
+            "name_az": "İxlas"
+        },
+        {
+            "chapter": 113,
+            "name_tr": "Felak",
+            "name_az": "Fələq"
+        },
+        {
+            "chapter": 114,
+            "name_tr": "Nas",
+            "name_az": "Nəs"
+        }
+ 
+    ]
+}
