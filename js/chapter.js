@@ -5,7 +5,7 @@ let chapter_info = document.querySelector('.chapter-info')
 
 
 const chapterData = async () => {
-  fetch('./json/quran-chapter-info.json').
+  fetch('../../../json/quran-chapter-info.json').
     then(res => res.json()).
     then(data => {
       let filtered = data.quran.filter(chapter => chapter.chapter == id)
@@ -20,7 +20,7 @@ chapterData()
 
 
 const quranData = async () => {
-  fetch('./json/quran-az.json').
+  fetch('../../../json/quran-az.json').
     then(res => res.json()).
     then(data => {
       let filtered = data.quran.filter(chapter => chapter.chapter == id)

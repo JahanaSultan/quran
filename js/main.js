@@ -49,11 +49,11 @@ const capitalize = (str) => {
 }
 
 const func = async () => {
-    fetch('./json/quran-chapter-info.json').
+    fetch('../../../json/quran-chapter-info.json').
         then(res => res.json()).
         then(data => {
             data.quran.map(chapter => chapters.innerHTML += `<a onclick="navigatePage(this)" data-id=${chapter.chapter}>
-        <li><span>${chapter.chapter}.</span> ${chapter.name_az}</li>
+        <li><p><span>${chapter.chapter}</span> ${chapter.name_az}</p> <p>${chapter.name_ar} <span>${chapter.verse_count} ayə</span></p> </li>
         </a>`)
         })
 }
@@ -63,7 +63,7 @@ func()
 
 
 const func2 = async () => {
-    fetch('./json/quran-az.json').
+    fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/aze-alikhanmusayev.json').
         then(res => res.json()).
         then(data => {
             let verse = data.quran[random]
@@ -115,14 +115,11 @@ const func4 = () => {
     var yil = tarih.getFullYear();
 
     var tarihMetni = gun + " " + month_names[ay - 1] + " " + yil;
-    gregorian.innerHTML = `<p>${tarihMetni}</p>`
+    gregorian.innerHTML += `<p>${tarihMetni}</p>`
 }
 
 func4()
 
-fetch('http://api.alquran.cloud/v1/ayah/262/ar.alafasy').
-    then(res => res.json()).
-    then(data => console.log(data.data.text))
 
 
 const navigatePage = (btn) => {
