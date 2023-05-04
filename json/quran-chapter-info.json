@@ -3,7 +3,7 @@
         {
             "chapter": 1,
             "transliteration": "Al-Fatiha",
-            "name_ar": "الفاتحة",
+            "name_ar": "سُورَةُ ٱلْفَاتِحَةِ",
             "name_tr": "Fatiha",
             "name_az": "Fatihə",
             "verse_count": 7
@@ -11,7 +11,7 @@
         {
             "chapter": 2,
             "transliteration": "Al-Baqara",
-            "name_ar": "البقرة",
+            "name_ar": "سُورَةُ البَقَرَةِ",
             "name_tr": "Bakara",
             "name_az": "Bəqərə",
             "verse_count": 286

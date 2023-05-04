@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    list-style: none;
+    color: #363062;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url(quran.jpg);
+    background-size: cover;
+    background-position: left center;
+    background-attachment: fixed;
+}
+
+.padding-x{
+    padding:0 50px;
+}
+
+
+.overlay {
+    background-color: #e9d5dae3;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #E04D01;
+    font-weight: 800;
+}
+
+.chapters {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.chapters a {
+    width: calc(100% / 8);
+    margin: 5px 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+.chapters a li {
+    font-weight: 800;
+}
+
+span{
+    color:#CD1818;
+}
+
+p{
+    text-align: center;
+    color:  #fff;
+}
+
+.daily-verse{
+    display: grid;
+    place-items: center;    
+    padding: 20px;
+    background-color:#CD1818 ;
+}
+
+.today{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.hijri, .gregorian, #clock{
+    width: calc(100% / 3);
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.today p{
+    color: #000!important;
+}
+
+audio {
+    width: 300px;
+    height: 40px;
+    border-radius: 100vmax;
+    font-size: 30px;
+}
+
+
+
+.chapter li{
+    font-size: 25px;
+    padding: 10px 50px;
+}
+.chapter li p{
+   color: #E04D01;
+   text-align: right;
+   margin-top: 5px;
+   font-family: 'Noto Naskh Arabic', serif;
+}
+
+h2{
+    text-align: center;
+    color: #CD1818;
+    font-family: 'Noto Naskh Arabic', serif;
+}
