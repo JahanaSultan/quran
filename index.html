@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Quran</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/output.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/quran.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <title>Ana Səhifə</title>
 </head>
 
-<body>
-    <div class="daily-verse bg-slate-600"></div>
-    <div class="today">
-        <div class="hijri">
-            <h3>Hicri</h3>
-        </div>
-        <div id="clock"></div>
-        <div class="gregorian">
-            <h3>Miladi</h3>
-        </div>
+<body onload="loadPage()">
+  <div class="overlay">
+    <nav class="padding-x">
+      <div class="logo">
+        <h1>WoV<img src="./img/quran.svg" alt=""></h1>
+      </div>
+      <div class="search">
+        <input type="search" name="search">
+        <button><i class="ri-search-line"></i></button>
+      </div>
+    </nav>
+    <div class="daily-verse">
+      <h3><i class="ri-mail-send-line"></i> Mesajınız Var!</h3>
     </div>
-    <div class="overlay padding-x">
 
-        <h1>Surələr</h1>
-
+    <div class="container padding-x">
+      <main>
+        <div class="filter">
+        </div>
+        <h2>Surələr</h2>
         <ul class="chapters">
         </ul>
+      </main>
+      <aside>
+        <h2>Təqvim</h2>
+        <div class="today">
+          <div class="hijri">
+            <h3>Hicri</h3>
+          </div>
+          <div id="clock"></div>
+          <div class="gregorian">
+            <h3>Miladi</h3>
+          </div>
+        </div>
+      </aside>
     </div>
+  </div>
+  <div class="loading">
+    <img src="./img/quran.svg" alt="">
+    <h2>Yüklənir...</h2>
+  </div>
 
-    <script src="./assets/js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

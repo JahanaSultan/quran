@@ -1,6 +1,6 @@
 # Bu repository Quranı Azərbaycan dilində oxumaq üçün hazırlanmışdır.
 
-Bu repositoridə istifadə etdiyim qaynaqlar aşağıdakılardır:
+İstifadə etdiyim qaynaqlar aşağıdakılardır:
 
 - [Əlixan Musayevin tərcüməsi](https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/aze-alikhanmusayev.json)
 
@@ -11,3 +11,9 @@ Bu repositoridə istifadə etdiyim qaynaqlar aşağıdakılardır:
 - [Hicri təqvimi üçün](https://aladhan.com/islamic-calendar-api)
 
 - [Namaz vaxtları üçün](https://aladhan.com/prayer-times-api)
+
+- [Logoda yer alan svg](https://iconscout.com/contributors/iconscout)
+
+- [Arxa plan şəkli](https://unsplash.com/photos/LanJEVFzxPw)
+
+ 
