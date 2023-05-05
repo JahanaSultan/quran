@@ -2,30 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/output.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/quran.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <title>Ana Səhifə</title>
 </head>
 
-<body>
-    <div class="overlay">
-        <h1 class="chapter-name"></h1>
-        <p class="chapter-info"></p>
-        <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-        <ul class="chapter">
-
-        </ul>
+<body onload="loadPage()">
+  <div class="overlay">
+    <nav class="padding-x">
+      <div class="logo">
+        <h1>WoV<img src="./img/quran.svg" alt=""></h1>
+      </div>
+      <div class="search">
+        <input type="search" name="search">
+        <button><i class="ri-search-line"></i></button>
+      </div>
+    </nav>
+    <div class="daily-verse padding-x">
+      <h3><i class="ri-mail-send-line"></i> Mesajınız Var!</h3>
     </div>
-    <script src="./assets/js/chapter.js"></script>
+    <div class="container padding-x">
+      <main>
+        <div class="overlay">
+            <h1 class="chapter-name"></h1>
+            <p class="chapter-info"></p>
+            <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <ul class="chapter">
+            
+            </ul>
+            </div>
+      </main>
+      <aside>
+        <h2>Təqvim</h2>
+        <div class="today">
+          <div class="hijri">
+            <h3>Hicri</h3>
+          </div>
+          <div id="clock"></div>
+          <div class="gregorian">
+            <h3>Miladi</h3>
+          </div>
+        </div>
+        <div class="prayer-sticky">
+          <h2>Namaz Vaxtları</h2>
+          <div class="prayer-date">
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div class="loading">
+    <img src="./img/quran.svg" alt="">
+    <h2>Yüklənir...</h2>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/chapter.js"></script>
 </body>
 
 </html>
