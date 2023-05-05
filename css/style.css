@@ -29,6 +29,7 @@ body {
     align-items: center;
     display: none;
     flex-direction: column;
+    z-index: 1001;
 }
 
 .loading img {
@@ -49,7 +50,7 @@ p {
 .overlay {
     width: 100%;
     min-height: 100vh;
-    background: #013f4eb6;
+    background: #013f4ed1;
 }
 
 .padding-x {
@@ -122,6 +123,7 @@ nav .search button {
     color: #E4E2DB;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .daily-verse h3 {
@@ -161,7 +163,7 @@ nav .search button {
     overflow: hidden;
 }
 
-.container main ul.chaptersli p {
+.container main ul.chapters li p {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -268,6 +270,47 @@ nav .search button {
 
 .container aside .prayer-date ul li:not(:last-of-type) {
     border-bottom: 1px solid #C9BFB7;
+}
+
+/* CHAPTER.HTML */
+
+.container main .chapter-name{
+    color: #E4E2DB;
+    font-size: 30px;
+    margin: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+.container main .chapter-name span{
+    display: block;
+    color: #99583B;
+}
+.container main .chapter-info{
+    background-color: #E4E2DB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+}
+.container main .chapter-info p{
+    flex:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-top: 1px solid #C9BFB7;
+    font-size: 18px;
+}
+.container main .chapter-info :is(p:first-child, p:nth-child(2)){
+    border-top: none;
+}
+.container main .chapter-info p:nth-child(even){
+    border-left: 1px solid #C9BFB7;
+}
+
+.container main .chapter-info p span{
+color: #99583B;
 }
 
 

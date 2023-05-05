@@ -5,13 +5,19 @@ let chapter_info = document.querySelector('.chapter-info')
 
 
 const chapterData = async () => {
-  fetch('../../../json/quran-chapter-info.json').
+  fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-chapter-info.json').
     then(res => res.json()).
     then(data => {
+      console.log(data)
       let filtered = data.quran.filter(chapter => chapter.chapter == id)
       filtered.map(chapter => {
-        chapter_name.innerHTML = `<h1>${chapter.name_az} (${chapter.name_ar})</h1>`
-        chapter_info.innerHTML=`<p>Ayə sayı: ${chapter.verse_count}</p>`
+        chapter_name.innerHTML = `${chapter.name_az} <span>(${chapter.name_ar})</span>`
+        chapter_info.innerHTML = `
+        <p><span>Ayə sayı</span>: ${chapter.verse_count}</p>
+        <p><span>Endirilmə sırası</span>: ${chapter.revelation_order}</p>
+        <p><span>Endirilmə yeri</span>: ${chapter.revelation_place == "Mecca"? "Məkkə" : "Mədinə"}</p>
+        <p><span>Yerləşdiyi səhifə</span>: ${chapter.page}</p>
+        `
       })
     })
 }
@@ -40,7 +46,6 @@ const quranArabic = async () => {
       let verses_place = document.querySelectorAll('li')
       let verses = data.data.ayahs
       verses_place.forEach((verse, index) => {
-        console.log(index)
         if (index == 0) {
           verse.innerHTML += `<p>${verses[index].text.slice(40)}</p>`
         }

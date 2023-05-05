@@ -62,6 +62,7 @@ const loadPage = () => {
     setInterval(updateTime, 1000);
     today_date()
     daily_verse()
+    run()
 }
 
 
@@ -159,11 +160,81 @@ const prayer_times = async (city, country, year, month, day) => {
                 <li><span>İşa</span><span>${data.data[day-1].timings.Isha.slice(0, 5)}</span></li>
             <ul>
             `
-            gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year
+            gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year 
             hijri.innerHTML += data.data[day-1].date.hijri.day + ' ' + hijri_months[data.data[day-1].date.hijri.month.number - 1] + ' ' + data.data[day-1].date.hijri.year
         })
 
 }
+
+
+
+// *Placeholder typeeffect animasyasi ucun funksiya
+
+const addToPlaceholder=(toAdd, el)=> {
+    el.attr('placeholder', el.attr('placeholder') + toAdd);
+    return new Promise(resolve => setTimeout(resolve, 100));
+}
+
+const clearPlaceholder=(el)=> {
+    el.attr("placeholder", "");
+}
+
+const printPhrase=(phrase, el)=> {
+    return new Promise(resolve => {
+        clearPlaceholder(el);
+        let letters = phrase.split('');
+        letters.reduce(
+            (promise, letter, index) => promise.then(_ => {
+                if (index === letters.length - 1) {
+                    setTimeout(resolve, 3000);
+                }
+                return addToPlaceholder(letter, el);
+            }),
+            Promise.resolve()
+        );
+    });
+} 
+
+const printPhrases=(phrases, el)=> {
+    phrases.reduce(
+        (promise, phrase) => promise.then(_ => printPhrase(phrase, el)), 
+        Promise.resolve()
+    );
+}
+
+const run=()=> {
+    let phrases = [
+        "Tövhid",
+        "Namaz",
+        "Oruc",
+        "Zəkat",
+        "Həcc",
+        "Zikr",
+        "Dua",
+        "Səcdə",
+        "Tağut",
+        "Şeytan",
+        "İblis",
+        "Cəhənnəm",
+        "Cənnət",
+        "İman",
+        "İslam",
+        "Müsəlman",
+        "Mömin",
+        "Müqəddəs",
+        "Mələklər",
+        "Kitab",
+        "Quran",
+        "Münafiq",
+        "Müşrik",
+        "Kafir",
+        "Peyğəmbər",
+        "Nə axtarırsan?"
+    ];
+
+    printPhrases(phrases, $('input[type="search"]'));
+}
+
 
 
 
