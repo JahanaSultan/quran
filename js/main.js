@@ -70,7 +70,7 @@ const chapterNames = async () => {
     fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-chapter-info.json').
         then(res => res.json()).
         then(data => data.quran.map(chapter => chapters.innerHTML +=
-            `<a onclick="navigatePage(this)" data-id=${chapter.chapter}>
+            `<a onclick="navigatePage(this)" data-id=${chapter.chapter} data-sajda=${chapter.sajda_verse}>
                 <li>
                     <p>
                         <span>${chapter.chapter}</span> ${chapter.name_az}
@@ -87,6 +87,7 @@ const chapterNames = async () => {
 
 const navigatePage = (btn) => {
     localStorage.setItem('chapter', btn.dataset.id)
+    localStorage.setItem('sajda', btn.dataset.sajda)
     window.location.href = "chapter.html";
 };
 

@@ -17,11 +17,13 @@
 <body onload="loadPage()">
     <div class="overlay">
         <nav class="padding-x">
-            <div class="logo">
-                <h1>WoV<img src="./img/quran.svg" alt=""></h1>
-            </div>
+            <a href="index.html">
+                <div class="logo">
+                  <h1>WoV<img src="./img/quran.svg" alt=""></h1>
+                </div>
+              </a>
             <div class="search">
-                <input type="search" name="search" placeholder="Qurandan kəlimə axtarın...">
+                <input type="search" name="search">
                 <button><i class="ri-search-line"></i></button>
             </div>
         </nav>
@@ -32,6 +34,7 @@
             <main>
                 <h1 class="chapter-name"></h1>
                 <p class="chapter-info"></p>
+                <p class="starting"></p>
                 <ul class="chapter">
                 </ul>
             </main>
@@ -58,9 +61,10 @@
         <img src="./img/quran.svg" alt="">
         <h2>Yüklənir...</h2>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script src="./js/chapter.js"></script>
+    <script src="./js/main.js"></script>
+   
 </body>
 
 </html>

@@ -16,6 +16,7 @@ body {
     background: url(../img/quran.jpg);
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .loading {
@@ -67,7 +68,7 @@ nav {
     flex-wrap: wrap;
     transition: 0.3s;
     padding-top: 10px;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
     background-color: #013f4e;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
@@ -114,7 +115,7 @@ nav .search button {
     height: 100%;
 }
 
- .daily-verse {
+.daily-verse {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -247,9 +248,10 @@ nav .search button {
 .container aside .prayer-date {
     align-items: flex-start;
 }
+
 .container aside .prayer-sticky {
     position: sticky;
-    top:calc(50vh - 145px);
+    top: calc(50vh - 145px);
 }
 
 .container aside .prayer-date ul {
@@ -263,7 +265,8 @@ nav .search button {
     align-items: center;
     padding: 10px 0;
 }
-.container aside .prayer-date ul li span:first-child{
+
+.container aside .prayer-date ul li span:first-child {
     font-size: 18px;
     color: #99583B;
 }
@@ -274,46 +277,115 @@ nav .search button {
 
 /* CHAPTER.HTML */
 
-.container main .chapter-name{
+.container main .chapter-name {
     color: #E4E2DB;
     font-size: 30px;
     margin: 30px;
     font-weight: 900;
     text-align: center;
 }
-.container main .chapter-name span{
+
+.container main .chapter-name span {
     display: block;
     color: #99583B;
 }
-.container main .chapter-info{
-    background-color: #E4E2DB;
+
+.container main .chapter-info {
+    background-color: #B39375;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     border-radius: 5px;
 }
-.container main .chapter-info p{
-    flex:50%;
+
+.container main .chapter-info p {
+    flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     border-top: 1px solid #C9BFB7;
     font-size: 18px;
+    color: #E4E2DB;
 }
-.container main .chapter-info :is(p:first-child, p:nth-child(2)){
+
+.container main .chapter-info :is(p:first-child, p:nth-child(2)) {
     border-top: none;
 }
-.container main .chapter-info p:nth-child(even){
+
+.container main .chapter-info p:nth-child(even) {
     border-left: 1px solid #C9BFB7;
 }
 
-.container main .chapter-info p span{
-color: #99583B;
+.container main .chapter-info p span {
+    color: #99583B;
+    margin-right: 10px;
 }
 
+.container main .starting {
+    font-size: 50px;
+    text-align: center;
+    color: #B39375;
+    margin: 10px 0;
+}
 
+.container main .chapter {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.container main .chapter li {
+    background-color: #E4E2DB;
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid #99583B;
+}
+
+.container main .chapter li span {
+    width: 50px;
+    display: grid;
+    place-content: center;
+    color: #E4E2DB;
+    background-color: #99583B;
+    padding: 10px;
+}
+
+.container main .chapter li .chapter-text {
+    width: calc(100% - 50px);
+}
+
+.container main .chapter li .chapter-text p {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.container main .chapter li .chapter-text p:first-child {
+    font-size: 25px;
+    width: 100%;
+    background-color: #B39375;
+    color: #E4E2DB;
+}
+
+.container main .chapter li .audio {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #C9BFB7;
+}
+
+.container main .chapter li .audio audio {
+    width: 100%;
+    height: 50px;
+    background-color: #C9BFB7;
+    border-radius: 0
+}
+
+.container main .chapter li .audio audio::-webkit-media-controls-panel {
+    background-color: #C9BFB7;
+    border-radius: 0;
+}
 
 @media screen and (max-width: 1024px) {
     .padding-x {
@@ -337,3 +409,46 @@ color: #99583B;
 }
 
 @media screen and (max-width: 500px) {}
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
