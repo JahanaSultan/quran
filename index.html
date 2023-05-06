@@ -22,10 +22,10 @@
           <h1>WoV<img src="./img/quran.svg" alt=""></h1>
         </div>
       </a>
-      <div class="search">
+      <form class="search" onsubmit="return searchWord()">
         <input type="search" name="search">
-        <button><i class="ri-search-line"></i></button>
-      </div>
+        <button type="submit"><i class="ri-search-line"></i></button>
+      </form>
     </nav>
     <div class="daily-verse padding-x">
       <h3><i class="ri-mail-send-line"></i> Mesajınız Var!</h3>
@@ -69,6 +69,9 @@
     <h2>Yüklənir...</h2>
   </div>
 
+  <div class="back-to-top" onclick="backToTop()">
+    <i class="ri-arrow-up-s-line"></i>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="

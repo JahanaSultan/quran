@@ -27,8 +27,8 @@ const chapterData = async () => {
 chapterData()
 
 
-const quranArabic = () => {
-  fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-ar.json').
+const quranArabic = async () => {
+  await fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-ar.json').
     then(res => res.json()).
     then(data => {
       let filtered = data.quran.filter(chapter => chapter.chapter == id)
@@ -57,7 +57,7 @@ const quranData = async () => {
         }
       })
     })
-    loading_div.style.display = 'none'
+  loading_div.style.display = 'none'
 }
 
 quranArabic()
@@ -79,3 +79,5 @@ const audio = async () => {
       })
     })
 }
+
+

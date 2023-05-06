@@ -22,22 +22,19 @@
                     <h1>WoV<img src="./img/quran.svg" alt=""></h1>
                 </div>
             </a>
-            <form class="search" onsubmit="return searchPage();">
+            <form class="search" onsubmit="return searchWord()">
                 <input type="search" name="search">
                 <button type="submit"><i class="ri-search-line"></i></button>
-            </form>
+              </form>
         </nav>
         <div class="daily-verse padding-x chapter-page">
             <h3><i class="ri-mail-send-line"></i> Mesajınız Var!</h3>
         </div>
         <div class="container padding-x">
-            
             <main>
-                <h1 class="chapter-name"></h1>
-                <p class="chapter-info"></p>
-                <p class="starting"></p>
-                <ul class="chapter">
-                </ul>
+                <h2>Axtarış Nəticələri</h2>
+                <ul class="chapter"></ul>
+                
             </main>
             <aside class="chapter-page">
                 <h2>Təqvim</h2>
@@ -63,24 +60,21 @@
               <a href=""><li><i class="ri-telegram-line"></i></li></a>
             </ul> -->
             <h4><i class="ri-copyright-line"></i> 2023</h4>
-        </footer>
+          </footer>
     </div>
     <div class="loading">
         <img src="./img/quran.svg" alt="">
         <h2>Yüklənir...</h2>
     </div>
-
     <div class="back-to-top" onclick="backToTop()">
         <i class="ri-arrow-up-s-line"></i>
-    </div>
-
+      </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/chapter.js"></script>
-
-
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

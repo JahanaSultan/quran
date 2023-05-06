@@ -62,8 +62,10 @@ const loadPage = () => {
 const chapterNames = async () => {
     fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-chapter-info.json').
         then(res => res.json()).
-        then(data => {data.quran.map(chapter => chapters.innerHTML +=
-            `<a onclick="navigatePage(this)" data-id=${chapter.chapter} data-sajda=${chapter.sajda_verse}>
+        then(data => {
+            if (chapters) {
+                data.quran.map(chapter => chapters.innerHTML +=
+                    `<a onclick="navigatePage(this)" data-id=${chapter.chapter} data-sajda=${chapter.sajda_verse}>
                 <li>
                     <p>
                         <span>${chapter.chapter}</span> ${chapter.name_az}
@@ -73,9 +75,10 @@ const chapterNames = async () => {
                     </p> 
                 </li>
             </a>`
-        )
-        loading_div.style.display = 'none'
-})
+                )
+            }
+            loading_div.style.display = 'none'
+        })
 }
 
 
@@ -126,7 +129,6 @@ const daily_verse = async () => {
 }
 
 const current_city = async () => {
-    console.log("called")
     navigator.geolocation.getCurrentPosition((position) => {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
@@ -143,8 +145,6 @@ const prayer_times = async (city, country, year, month, day) => {
     fetch(`https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=${country}&method=13`).
         then(res => res.json()).
         then(data => {
-            console.log(data.data)
-
             prayer_date.innerHTML += `
             <h4> ${city}, ${country}</h4>
             <ul>
@@ -233,5 +233,37 @@ const printPhrasesRun = () => {
 
 
 
+const searchWord = () => {
+    let input = document.querySelector("input[type='search']")
+    let word = input.value.trim()
+            if (word && word.length >= 3) {
+        localStorage.setItem("search", word)
+        window.location.href = "search.html";
+    }
+
+    return false
+}
 
 
+
+//BACK TO TOP
+
+
+let back = document.querySelector(".back-to-top")
+window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+
+        back.style.transform = "translateX(0)"
+    }
+    else {
+        back.style.transform = "translateX(500%)";
+    }
+}
+)
+
+// BACK TO TOP BUTTON
+
+const backToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
