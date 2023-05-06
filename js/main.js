@@ -150,7 +150,7 @@ const getPrayTime = async (long, lat) => {
     let year = today.getFullYear()
     try {
         console.log(long, lat)
-        await fetch(`http://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${lat}&longitude=${long}&method=13`).
+        await fetch(`https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${lat}&longitude=${long}&method=13`).
             then(res => res.json()).
             then(data => {
                 prayer_date.innerHTML += `

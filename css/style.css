@@ -550,5 +550,9 @@ footer ul {
     .container main ul.chapters li p:last-of-type {
         width: 150px;
     }
+
+    .container main .chapter-info p {
+        font-size: 12px;
+    }
     
 }
