@@ -53,7 +53,6 @@ const capitalize = (str) => {
 const loadPage = () => {
     chapterNames()
     setInterval(updateTime, 1000);
-    today_date()
     daily_verse()
     printPhrasesRun()
 }
@@ -104,19 +103,6 @@ const updateTime = () => {
     clock.innerHTML = `<p>${hours}:${minutes}:${seconds}</p><p>${dayName}</p>`;
 }
 
-const today_date = async () => {
-    let today = new Date()
-    let day = today.getDate()
-    let month = today.getMonth() + 1
-    let year = today.getFullYear()
-    if (localStorage.getItem('city') == null || localStorage.getItem('country') == null) {
-        await current_city()
-        prayer_times(localStorage.getItem('city'), localStorage.getItem('country'), year, month, day)
-    }
-    else {
-        prayer_times(localStorage.getItem('city'), localStorage.getItem('country'), year, month, day)
-    }
-}
 
 const daily_verse = async () => {
     fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/aze-alikhanmusayev.json').
@@ -128,27 +114,46 @@ const daily_verse = async () => {
         )
 }
 
-const current_city = () => {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-        var lat = position.coords.latitude;
-        var long = position.coords.longitude;
+
+navigator.geolocation.getCurrentPosition(async (position) => {
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    currentCity(long, lat)
+    getPrayTime(long, lat)
+})
+
+
+
+const currentCity = async (long, lat) => {
+    if (localStorage.getItem('city') && localStorage.getItem('country')) {
+        document.getElementById('location').innerHTML = `${localStorage.getItem('city')}, ${localStorage.getItem('country')}`
+    }
+    else {
         try {
             const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=3e490cfc89ac4cce88823ab10ffd4c59`)
             const data = await response.json()
             localStorage.setItem('city', data.results[0].components.city)
             localStorage.setItem('country', data.results[0].components.country)
-        } catch (error) {
+            document.getElementById('location').innerHTML = `${data.results[0].components.city}, ${data.results[0].components.country}`
+        }
+        catch (error) {
             console.log(error)
         }
-    })
+    }
 }
 
-const prayer_times = async (city, country, year, month, day) => {
-    fetch(`https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=${country}&method=13`).
-        then(res => res.json()).
-        then(data => {
-            prayer_date.innerHTML += `
-            <h4> ${city}, ${country}</h4>
+
+const getPrayTime = async (long, lat) => {
+    let today = new Date()
+    let day = today.getDate()
+    let month = today.getMonth() + 1
+    let year = today.getFullYear()
+    try {
+        console.log(long, lat)
+        await fetch(`http://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${lat}&longitude=${long}&method=13`).
+            then(res => res.json()).
+            then(data => {
+                prayer_date.innerHTML += `
             <ul>
                 <li><span>Fəcr</span><span>${data.data[day - 1].timings.Fajr.slice(0, 5)}</span></li>
                 <li><span>Günəş</span><span>${data.data[day - 1].timings.Sunrise.slice(0, 5)}</span></li>
@@ -158,10 +163,13 @@ const prayer_times = async (city, country, year, month, day) => {
                 <li><span>İşa</span><span>${data.data[day - 1].timings.Isha.slice(0, 5)}</span></li>
             <ul>
             `
-            gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year
-            hijri.innerHTML += data.data[day - 1].date.hijri.day + ' ' + hijri_months[data.data[day - 1].date.hijri.month.number - 1] + ' ' + data.data[day - 1].date.hijri.year
-        })
-
+                gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year
+                hijri.innerHTML += data.data[day - 1].date.hijri.day + ' ' + hijri_months[data.data[day - 1].date.hijri.month.number - 1] + ' ' + data.data[day - 1].date.hijri.year
+            })
+    }
+    catch (error) {
+        console.log(error)
+    }
 }
 
 

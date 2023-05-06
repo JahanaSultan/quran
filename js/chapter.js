@@ -10,7 +10,6 @@ const chapterData = async () => {
   fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-chapter-info.json').
     then(res => res.json()).
     then(data => {
-      console.log(data)
       let filtered = data.quran.filter(chapter => chapter.chapter == id)
       filtered.map(chapter => {
         chapter.bismillah_pre ? start.innerHTML = chapter.bismillah_pre : start.innerHTML = ``
@@ -67,7 +66,6 @@ const audio = async () => {
   fetch(`http://api.alquran.cloud/v1/surah/${id}/ar.alafasy`).
     then(res => res.json()).
     then(data => {
-      console.log(data)
       let verses_place = document.querySelectorAll('li .audio')
       verses_place.forEach((verse, index) => {
         verse.innerHTML = `
