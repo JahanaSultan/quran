@@ -236,10 +236,10 @@ nav .search button {
 .container main ul.chapters li p {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-weight: 600;
     padding: 0 20px;
     transition: 0.3s ease;
+    width: calc(100% - 200px);
 }
 
 .container main ul.chapters li p:last-of-type {
@@ -540,4 +540,15 @@ footer ul {
     .daily-verse.chapter-page {
         display: none;
     }
+    nav .search {
+        width: 200px;
+    }
+    .container main ul.chapters li p {
+        width: calc(100% - 150px);
+    }
+    
+    .container main ul.chapters li p:last-of-type {
+        width: 150px;
+    }
+    
 }

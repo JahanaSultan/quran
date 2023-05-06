@@ -128,16 +128,18 @@ const daily_verse = async () => {
         )
 }
 
-const current_city = async () => {
-    navigator.geolocation.getCurrentPosition((position) => {
+const current_city = () => {
+    navigator.geolocation.getCurrentPosition(async (position) => {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
-        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=3e490cfc89ac4cce88823ab10ffd4c59`).
-            then(res => res.json()).
-            then(data => {
-                localStorage.setItem('city', data.results[0].components.city)
-                localStorage.setItem('country', data.results[0].components.country)
-            })
+        try {
+            const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=3e490cfc89ac4cce88823ab10ffd4c59`)
+            const data = await response.json()
+            localStorage.setItem('city', data.results[0].components.city)
+            localStorage.setItem('country', data.results[0].components.country)
+        } catch (error) {
+            console.log(error)
+        }
     })
 }
 
@@ -236,7 +238,7 @@ const printPhrasesRun = () => {
 const searchWord = () => {
     let input = document.querySelector("input[type='search']")
     let word = input.value.trim()
-            if (word && word.length >= 3) {
+    if (word && word.length >= 3) {
         localStorage.setItem("search", word)
         window.location.href = "search.html";
     }
