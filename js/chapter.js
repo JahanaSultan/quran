@@ -57,6 +57,7 @@ const quranData = async () => {
         }
       })
     })
+    loading_div.style.display = 'none'
 }
 
 quranArabic()

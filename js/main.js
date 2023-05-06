@@ -45,31 +45,24 @@ let hijri_months = [
     "Zilhicce"
 ];
 
-const loading = () => {
-    loading_div.style.display = 'flex'
-    setTimeout(() => {
-        loading_div.style.display = 'none'
-    }, 1000);
-}
 
 const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 const loadPage = () => {
-    loading()
     chapterNames()
     setInterval(updateTime, 1000);
     today_date()
     daily_verse()
-    run()
+    printPhrasesRun()
 }
 
 
 const chapterNames = async () => {
     fetch('https://cdn.jsdelivr.net/gh/JahanaSultan/quran@latest/json/quran-chapter-info.json').
         then(res => res.json()).
-        then(data => data.quran.map(chapter => chapters.innerHTML +=
+        then(data => {data.quran.map(chapter => chapters.innerHTML +=
             `<a onclick="navigatePage(this)" data-id=${chapter.chapter} data-sajda=${chapter.sajda_verse}>
                 <li>
                     <p>
@@ -81,7 +74,8 @@ const chapterNames = async () => {
                 </li>
             </a>`
         )
-        )
+        loading_div.style.display = 'none'
+})
 }
 
 
@@ -153,16 +147,16 @@ const prayer_times = async (city, country, year, month, day) => {
 
             prayer_date.innerHTML += `
             <ul>
-                <li><span>Fəcr</span><span>${data.data[day-1].timings.Fajr.slice(0, 5)}</span></li>
-                <li><span>Günəş</span><span>${data.data[day-1].timings.Sunrise.slice(0, 5)}</span></li>
-                <li><span>Zöhr</span><span>${data.data[day-1].timings.Dhuhr.slice(0, 5)}</span></li>
-                <li><span>Əsr</span><span>${data.data[day-1].timings.Asr.slice(0, 5)}</span></li>
-                <li><span>Məğrib</span><span>${data.data[day-1].timings.Maghrib.slice(0, 5)}</span></li>
-                <li><span>İşa</span><span>${data.data[day-1].timings.Isha.slice(0, 5)}</span></li>
+                <li><span>Fəcr</span><span>${data.data[day - 1].timings.Fajr.slice(0, 5)}</span></li>
+                <li><span>Günəş</span><span>${data.data[day - 1].timings.Sunrise.slice(0, 5)}</span></li>
+                <li><span>Zöhr</span><span>${data.data[day - 1].timings.Dhuhr.slice(0, 5)}</span></li>
+                <li><span>Əsr</span><span>${data.data[day - 1].timings.Asr.slice(0, 5)}</span></li>
+                <li><span>Məğrib</span><span>${data.data[day - 1].timings.Maghrib.slice(0, 5)}</span></li>
+                <li><span>İşa</span><span>${data.data[day - 1].timings.Isha.slice(0, 5)}</span></li>
             <ul>
             `
-            gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year 
-            hijri.innerHTML += data.data[day-1].date.hijri.day + ' ' + hijri_months[data.data[day-1].date.hijri.month.number - 1] + ' ' + data.data[day-1].date.hijri.year
+            gregorian.innerHTML += day + ' ' + month_names[month - 1] + ' ' + year
+            hijri.innerHTML += data.data[day - 1].date.hijri.day + ' ' + hijri_months[data.data[day - 1].date.hijri.month.number - 1] + ' ' + data.data[day - 1].date.hijri.year
         })
 
 }
@@ -171,16 +165,16 @@ const prayer_times = async (city, country, year, month, day) => {
 
 // *Placeholder typeeffect animasyasi ucun funksiya
 
-const addToPlaceholder=(toAdd, el)=> {
+const addToPlaceholder = (toAdd, el) => {
     el.attr('placeholder', el.attr('placeholder') + toAdd);
     return new Promise(resolve => setTimeout(resolve, 100));
 }
 
-const clearPlaceholder=(el)=> {
+const clearPlaceholder = (el) => {
     el.attr("placeholder", "");
 }
 
-const printPhrase=(phrase, el)=> {
+const printPhrase = (phrase, el) => {
     return new Promise(resolve => {
         clearPlaceholder(el);
         let letters = phrase.split('');
@@ -194,16 +188,16 @@ const printPhrase=(phrase, el)=> {
             Promise.resolve()
         );
     });
-} 
+}
 
-const printPhrases=(phrases, el)=> {
+const printPhrases = (phrases, el) => {
     phrases.reduce(
-        (promise, phrase) => promise.then(_ => printPhrase(phrase, el)), 
+        (promise, phrase) => promise.then(_ => printPhrase(phrase, el)),
         Promise.resolve()
     );
 }
 
-const run=()=> {
+const printPhrasesRun = () => {
     let phrases = [
         "Tövhid",
         "Namaz",
