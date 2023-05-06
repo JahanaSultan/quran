@@ -308,6 +308,12 @@ nav .search button {
     padding: 10px 0;
 }
 
+.container aside .prayer-date h4{
+    text-align: center;
+    color: #99583B;
+    width: 100%;
+}
+
 .container aside .prayer-date ul li span:first-child {
     font-size: 18px;
     color: #99583B;
@@ -465,3 +471,22 @@ nav .search button {
 
 
 
+footer {
+    background-color: #013f4e;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+footer h4{
+    text-align: center;
+    color: #B39375;
+}
+footer ul a li{
+    color: #C9BFB7;
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+}

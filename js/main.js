@@ -146,6 +146,7 @@ const prayer_times = async (city, country, year, month, day) => {
             console.log(data.data)
 
             prayer_date.innerHTML += `
+            <h4> ${city}, ${country}</h4>
             <ul>
                 <li><span>Fəcr</span><span>${data.data[day - 1].timings.Fajr.slice(0, 5)}</span></li>
                 <li><span>Günəş</span><span>${data.data[day - 1].timings.Sunrise.slice(0, 5)}</span></li>
